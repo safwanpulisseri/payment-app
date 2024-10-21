@@ -49,7 +49,7 @@ class MessageShowHelper {
           text: snackBarContent,textColor: kWhite,
           fontSize: 16,
         ),
-        backgroundColor: kOrange,
+        backgroundColor: kGreen,
         duration: const Duration(seconds: 1,),
       ),
     );

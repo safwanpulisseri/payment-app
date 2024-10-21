@@ -21,6 +21,7 @@ class _IntroPageState extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhite,
       body: Center(
         child: Container(
           height: screenHeight(context: context) / 2,

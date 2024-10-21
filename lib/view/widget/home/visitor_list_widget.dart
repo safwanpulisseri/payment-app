@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
-
 import '../../../core/const/height_width.dart';
 import '../../../core/theme/color.dart';
 import '../../../core/util/navigator_key.dart';
@@ -12,10 +10,10 @@ import '../common_widget/text_common_widget.dart';
 Widget visitorListWidget() {
   final userMobx = Provider.of<UserMobx>(navigatorKey!.currentContext!);
   return Observer(builder: (_) {
-    if (userMobx.visitors.isEmpty||userMobx.visitors==null) {
-      return Center(
+    if (userMobx.visitors.isEmpty) {
+      return const Center(
         child: TextWidgetCommon(
-          text: "No Visitors",textColor: kGrey.withOpacity(0.8),
+          text: "No Visitors",textColor: kGrey,
         ),
       );
     }
@@ -26,7 +24,7 @@ Widget visitorListWidget() {
         return
          Container(
           decoration: BoxDecoration(
-            color: kGrey.withOpacity(0.3),
+            color: kRedLight,
             borderRadius: BorderRadius.circular(10),
           ),child: ListTile(
           shape: RoundedRectangleBorder(

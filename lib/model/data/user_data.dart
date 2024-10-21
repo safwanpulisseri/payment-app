@@ -37,5 +37,6 @@ class UserData {
       log("Error: $e");
       return null;
     }
+    return null;
   }
 }

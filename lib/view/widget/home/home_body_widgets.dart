@@ -13,6 +13,7 @@ import 'home_small_widget.dart';
 Widget userProfileCard() {
   final userMobx = Provider.of<UserMobx>(navigatorKey!.currentContext!);
   return Card(
+    color: kRed.withOpacity(0.5),
     elevation: 5,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(15),
@@ -30,7 +31,7 @@ Widget userProfileCard() {
                   shape: BoxShape.circle,
                   color: kGrey.withOpacity(0.2),
                   border: userMobx.isDataEdited
-                      ? Border.all(color: kGreen, width: 3)
+                      ? Border.all(color: kGreen, width: 10)
                       : null,
                 ),
                 child: userMobx.userProfilePictureUrl.isNotEmpty

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../core/theme/color.dart';
-import '../../../core/util/navigator_key.dart';
 import '../../../model/models/visitor_model.dart';
 import '../../../view_model/mobx/user_mobx.dart';
 import '../common_widget/text_field_common_widget.dart';
@@ -41,7 +40,6 @@ Widget userAmountEditWidget({
   required TextEditingController controller,
 }) {
   return SizedBox(
-    width: MediaQuery.of(navigatorKey!.currentContext!).size.width / 2,
     child: TextFieldCommon(
       prefix: const TextWidgetCommon(
         text: '\u20B9',
@@ -74,6 +72,9 @@ Widget paymentMethodToggle({
             onChanged: (value) {
               onToggle(!value);
             },
+            activeColor: kGreen,
+            inactiveTrackColor:kRed.withOpacity(0.5),
+            inactiveThumbColor:kRed,
           ),
           const TextWidgetCommon(text: 'UPI'),
         ],
@@ -96,7 +97,7 @@ Widget homeAppBar({
   required TextEditingController controller,
 }) {
   return AppBar(
-    title: const TextWidgetCommon(text: "Payee Manager"),
+    title: const TextWidgetCommon(text: "Payment Manager"),
     actions: [
       TextButton(
         onPressed: () {
@@ -104,7 +105,7 @@ Widget homeAppBar({
           controller.text = '2500';
         },
         child: const Icon(
-          Icons.clear_all,
+          Icons.delete,
           color: kBlack,
         ),
       ),
