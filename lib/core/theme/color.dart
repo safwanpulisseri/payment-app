@@ -10,4 +10,4 @@ const kTransparent = Colors.transparent;
 const kGreen = Color(0xFF2A9721);
 const kAmber = Colors.amber;
 
-const appLogo = 'assets/playstore.png';
+const appLogo = 'assets/app_logo.png';
