@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../view/widget/common_widget/text_widget_common.dart';
+import '../../view/widget/common_widget/text_common_widget.dart';
+import '../theme/color.dart';
+import 'navigator_key.dart';
 
 class MessageShowHelper {
  static void showDialogBox({
